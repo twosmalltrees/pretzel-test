@@ -28,7 +28,6 @@ export class TestRunner extends EventEmitter {
   buildSuite(options: Options) {
     const testFilePaths = glob.sync(options.matching, {
       root: options.rootDir,
-      absolute: true
     });
     testFilePaths.forEach(require);
   }

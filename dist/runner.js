@@ -65,8 +65,7 @@ var TestRunner = /** @class */ (function (_super) {
     };
     TestRunner.prototype.buildSuite = function (options) {
         var testFilePaths = glob.sync(options.matching, {
-            root: options.rootDir,
-            absolute: true
+            root: options.rootDir
         });
         testFilePaths.forEach(require);
     };
